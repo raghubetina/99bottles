@@ -13,6 +13,10 @@ class Bottles
     end.chomp
   end
 
+  def song
+    verses(99, 0)
+  end
+
   private
 
     def first_line(number_of_bottles)
