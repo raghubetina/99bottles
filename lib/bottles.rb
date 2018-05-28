@@ -1,8 +1,8 @@
 class Bottles
-  def verse(thing)
+  def verse(number_of_bottles)
     <<-TEXT.gsub(/^\s+/, "")
-      99 bottles of beer on the wall, 99 bottles of beer.
-      Take one down and pass it around, 98 bottles of beer on the wall.
+      #{number_of_bottles} bottles of beer on the wall, #{number_of_bottles} bottles of beer.
+      Take one down and pass it around, #{number_of_bottles - 1} bottles of beer on the wall.
     TEXT
   end
 end
