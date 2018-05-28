@@ -7,6 +7,12 @@ class Bottles
     "#{first_line(number_of_bottles)}\n#{second_line(number_of_bottles)}\n"
   end
 
+  def verses(*numbers_of_bottles)
+    numbers_of_bottles.inject("") do |song, number_of_bottles|
+      song << "#{verse(number_of_bottles)}\n"
+    end.chomp
+  end
+
   private
 
     def first_line(number_of_bottles)
